@@ -1,6 +1,9 @@
 name: GitHub Actions ESLint
 run-name: ${{ github.actor }} is testing running ESLint via GitHub Actions
-on: [push]
+on:
+  push:
+    branches:
+      - main
 jobs:
   testing-github-actions:
     runs-on: ubuntu-latest
