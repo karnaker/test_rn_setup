@@ -2,7 +2,7 @@ name: GitHub Actions ESLint
 run-name: ${{ github.actor }} is testing running ESLint via GitHub Actions
 on: [push]
 jobs:
-  build:
+  testing-github-actions:
     runs-on: ubuntu-latest
     steps:
       - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event."
@@ -15,4 +15,7 @@ jobs:
       - name: Install npm dependencies
         run: |
           npm ci
+      - name: Run ESLint
+        run: |
+          npm run lint
       - run: echo "🍏 This job's status is ${{ job.status }}."
