@@ -1,7 +1,10 @@
 name: Continuous Integration Checks
-run-name: ${{ github.actor }} is testing running ESLint via GitHub Actions
+run-name: ${{ github.actor }} is testing the ESLint, Jest, and building the Android and iOS app via GitHub Actions
 on:
   push:
+    branches:
+      - main
+  pull_request:
     branches:
       - main
 jobs:
