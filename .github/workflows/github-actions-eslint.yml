@@ -39,4 +39,8 @@ jobs:
       - name: Run Jest
         run: |
           npm run test
+      - name: Build Android application
+        run: |
+          cd android
+          ./gradlew assembleDebug
       - run: echo "🍏 This job's status is ${{ job.status }}."
